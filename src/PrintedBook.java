@@ -6,7 +6,7 @@ public class PrintedBook extends PhysicalTitle{
         super(title, literatureType, copies);
         this.pages=pages;
     }
-
+    @Override
     protected double calculatePoints(){
         return pages*convertLiteratureType()*copies;
 

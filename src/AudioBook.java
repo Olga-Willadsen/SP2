@@ -7,6 +7,7 @@ public class AudioBook extends PhysicalTitle implements IAudioBook{
         this.durationMinutes=durationInMinutes;
     }
 
+    @Override
     protected double calculatePoints(){
         return (durationMinutes*0.5)*convertLiteratureType()*copies;
         //(varighed i minutter × 0.5) × litteraturtype × eksemplarer

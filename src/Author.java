@@ -17,7 +17,7 @@ public void addTitle(Title title){
 public double calculateRoyalties(){
        double total=0.0;
         for (Title t:titles){
-            total+=calculateRoyalties();
+            total+=t.calculateRoyalties();
        }
         return Math.round(total*100.0)/100.0;
         //gennemløb arraylist og læg alle royalties sammen
