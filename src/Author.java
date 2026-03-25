@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Author {
 
     private String name;
-    private ArrayList <Title> titles =new ArrayList<>();
+    private ArrayList <Title> titles;
 
     Author (String name){
         this.name=name;
-        this.titles=titles;
+        titles=new ArrayList<>();
     }
 
 
@@ -15,7 +15,12 @@ public void addTitle(Title title){
         titles.add(title);
 }
 public double calculateRoyalties(){
-        return 0.0;
+       double total=0.0;
+        for (Title t:titles){
+            total+=calculateRoyalties();
+       }
+        return Math.round(total*100.0)/100.0;
+        //gennemløb arraylist og læg alle royalties sammen
 }
 
 public String getName() {

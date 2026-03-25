@@ -7,11 +7,6 @@ public class EAudioBook extends NetTitle implements IAudioBook {
         this.durationInMinutes=durationInMinutes;
     }
 
-    protected double calculatePointes(){
-        return 0.0;
-    }
-
-
     @Override
     public int getDurationsInMinutes() {
         return 0;
@@ -19,7 +14,7 @@ public class EAudioBook extends NetTitle implements IAudioBook {
 
     @Override
     protected double calculatePoints() {
-        return 0;
+        return (durationInMinutes/2.0)*convertLiteratureType()*((getReach()*5)+(getAvailability()*0.5)+getUse());
     }
 }
 

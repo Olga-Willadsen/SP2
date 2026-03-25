@@ -8,13 +8,15 @@ public class AudioBook extends PhysicalTitle implements IAudioBook{
     }
 
     protected double calculatePoints(){
-        return 0.0;
+        return (durationMinutes*0.5)*convertLiteratureType()*copies;
+        //(varighed i minutter × 0.5) × litteraturtype × eksemplarer
+        //(192 × 0.5) × 1,7 × 140 = 22848 point
     }
 
 
     @Override
     public int getDurationsInMinutes() {
-        return 0;
+        return durationMinutes;
     }
 }
 

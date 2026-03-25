@@ -8,7 +8,10 @@ public class PrintedBook extends PhysicalTitle{
     }
 
     protected double calculatePoints(){
-        return 0.0;
+        return pages*convertLiteratureType()*copies;
+
+        //Sider × litteraturtype × eksemplarer
+        //166 × 1,7 × 140 = 39508 point
     }
 
 

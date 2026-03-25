@@ -19,8 +19,17 @@ public abstract class NetTitle extends Title {
     }
 
 
+    public int getAvailability() {
+        return availability;
+    }
 
+    public int getReach() {
+        return reach;
+    }
 
+    public int getUse() {
+        return use;
+    }
 }
 
 //abstract class NetTitle extends Title {
