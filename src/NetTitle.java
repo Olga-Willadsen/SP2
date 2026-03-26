@@ -4,15 +4,15 @@ public abstract class NetTitle extends Title {
     private int reach;
     private int use;
 
-    public NetTitle (String title, String literatureType, int availability, int reach, int use){
-        super(title, literatureType);
+    public NetTitle (String title, Literaturtype literaturType, int availability, int reach, int use){
+        super(title, literaturType);
         this.availability=availability;
         this.reach=reach;
         this.use=use;
     }
 
     protected double getPseudoCopies(){
-        return 0.0;
+        return (getReach()*5)+(getAvailability()*0.5)+getUse();
     }
     private int getUseFactor(){
         return 0;
@@ -21,14 +21,18 @@ public abstract class NetTitle extends Title {
 
     public int getAvailability() {
         return availability;
+        //(availability): antal kommuner, der har bogen til udlån
     }
 
     public int getReach() {
         return reach;
+        //(reach): antal kommuner, der har udlånt bogen
     }
 
     public int getUse() {
         return use;
+        //(use): antal udlån
+        //altid højere eller samme som availability
     }
 }
 

@@ -10,7 +10,7 @@ public class LibraryRoyaltyCalculator {
 
         setUpLibrary();
 
-        System.out.println(author1.calculateRoyalties());
+        System.out.println(author1.getName()+": "+author1.calculateRoyalties()+"kr.");
 
 
 
@@ -24,13 +24,13 @@ public class LibraryRoyaltyCalculator {
 
     static void setUpLibrary (){
 
-        author1.addTitle(new PrintedBook("Mit arbejde", "SKØN", 430, 429));
-        author1.addTitle(new AudioBook("De ansatte", "SKØN", 30, 139));
-        author1.addTitle(new PrintedBook("Min barsel", "FAG", 5965,168));
+        author1.addTitle(new PrintedBook("Mit arbejde", Literaturtype.SKON, 430,429));
+        author1.addTitle(new AudioBook("De ansatte", Literaturtype.SKON, 30, 139));
+        author1.addTitle(new PrintedBook("Min barsel", Literaturtype.FAG, 5965,168));
 
-        author2.addTitle(new PrintedBook("The Institute", "SKØN", 42000, 496));
-        author2.addTitle(new EAudioBook("IT", "SKØN", 95, 50, 22, 13000));
-        author2.addTitle(new EBook("Misery", "SKØN", 55, 65, 77, 89543, true));
+        author2.addTitle(new PrintedBook("The Institute", Literaturtype.SKON, 42000, 496));
+        author2.addTitle(new EAudioBook("IT", Literaturtype.SKON, 95, 50, 22, 13000));
+        author2.addTitle(new EBook("Misery", Literaturtype.SKON, 55, 65, 77, 89543, true));
 
     }
 

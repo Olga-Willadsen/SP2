@@ -3,8 +3,8 @@ public class EBook extends NetTitle{
     private int characters;
     private boolean illustrated;
 
-    public EBook(String title, String literatureType, int availability, int reach, int use, int characters, boolean illustrated){
-        super(title, literatureType, availability, reach, use);
+    public EBook(String title, Literaturtype literaturType, int availability, int reach, int use, int characters, boolean illustrated){
+        super(title, literaturType, availability, reach, use);
         this.characters=characters;
         this.illustrated=illustrated;
     }
@@ -17,7 +17,7 @@ public class EBook extends NetTitle{
 
     @Override
     protected double calculatePoints(){
-        return calculatePages()*convertLiteratureType()*((getReach()*5)+(getAvailability()*0.5)+getUse());
+        return calculatePages()*convertLiteratureType()*(getPseudoCopies());
 
 
         //Beregnede sider × litteraturtype × ((udbredelse × 5) + (tilgængelighed × 0,5) + anvendelsesfaktor)

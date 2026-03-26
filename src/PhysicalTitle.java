@@ -2,8 +2,8 @@ public abstract class PhysicalTitle extends Title{
 
     protected int copies;
 
-    public PhysicalTitle(String title, String literatureType, int copies){
-        super(title, literatureType);
+    public PhysicalTitle(String title, Literaturtype literaturType, int copies){
+        super(title, literaturType);
         this.copies=copies;
     }
 

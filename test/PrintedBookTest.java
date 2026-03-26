@@ -4,29 +4,28 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PrintedBookTest {
-
+    PrintedBook pb;
 
     @BeforeEach
-    public void setUp() {
-        static PrintedBook p= new PrintedBook("testbook", "BI", 10, 100);
-
-    }
-
-    public void calculateRoyaltiestest(){
-       static int i= p.calculateRoyalties pages*convertLiteratureType()*copies;
-    }
-
-    @Test
-    void calculateRoyalties() {
-         int actual=p.calculateRoyaltiestest();
+    void setUp() {
+        pb= new PrintedBook("TestBook", Literaturtype.SKON, 20, 10);
     }
 
     @Test
     void convertLiteratureType() {
 
+        double actual=pb.convertLiteratureType();
+
+        assertEquals(1.7, actual);
     }
 
     @Test
-    void testCalculatePoints() {
+    void calculatePoints() {
+        double actual= pb.calculatePoints();
+        assertEquals(340, actual);
     }
 }
+
+
+//sider'1.7*copies
+//10*1.7*20=340

@@ -2,8 +2,8 @@ public class AudioBook extends PhysicalTitle implements IAudioBook{
 
     private int durationMinutes;
 
-    public AudioBook(String title, String literatureType, int copies, int durationInMinutes){
-        super(title, literatureType, copies);
+    public AudioBook(String title, Literaturtype literaturType, int copies, int durationInMinutes){
+        super(title, literaturType, copies);
         this.durationMinutes=durationInMinutes;
     }
 
